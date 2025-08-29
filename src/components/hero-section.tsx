@@ -1,9 +1,16 @@
 "use client";
-
+import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Code, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export default function HeroSection() {
+    const socialLinks = [
+      { icon: Github, href: "#", label: "GitHub" },
+      { icon: Linkedin, href: "#", label: "LinkedIn" },
+      { icon: Twitter, href: "#", label: "Twitter" },
+      { icon: Mail, href: "mailto:angelo@example.com", label: "Email" },
+    ];
   return (
     <section
       id="home"
@@ -36,7 +43,7 @@ export default function HeroSection() {
             <div className="space-y-6 pb-[4rem]">
               <div className="space-y-4">
                 <p className="text-accent text-base sm:text-lg font-medium animate-bounce-slow">
-                  Hello, I'm
+                  Hello, I&apos;m
                 </p>
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
                   <span className="text-accent">Sostene</span>
@@ -93,10 +100,29 @@ export default function HeroSection() {
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full h-full flex items-center justify-center lg:-ml-16">
               <div className="text-accent/40 text-center relative z-30">
-                <div className="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-4 bg-accent/20 rounded-full flex items-center justify-center">
-                  <Code className="w-16 h-16 sm:w-24 sm:h-24 text-accent/60" />
+                <div className="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-4 bg-accent/20 rounded-full flex items-center justify-center border-2 border-accent/30 overflow-hidden">
+                  {/* <Code className="w-full h-full sm:w-24 sm:h-24 text-accent/60" /> */}
+                  <Image
+                    src="/imgs/profile.jpg"
+                    alt="Sostene BANANAYO"
+                    width={200}
+                    height={200}
+                    className="rounded-[10px] w-full h-full object-cover"
+                  />
                 </div>
-                <p className="text-base sm:text-lg">Your Image Here</p>
+                <div className="flex justify-center space-x-6">
+                  {socialLinks.map(({ icon: Icon, href, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      className="text-[#3b82f6] hover:text-[#2576f9] transition-colors duration-200"
+                      aria-label={label}
+                    >
+                      <Icon className="h-6 w-6" />
+                    </a>
+                  ))}
+                </div>
+                {/* <p className="text-base sm:text-lg">Your Image Here</p> */}
               </div>
             </div>
           </div>

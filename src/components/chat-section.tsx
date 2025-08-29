@@ -61,7 +61,7 @@ export default function ChatSection() {
             Get In <span className="text-accent">Touch</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            Let's discuss your next project or just say hello
+            Let&apos;s discuss your next project or just say hello
           </p>
         </div>
 

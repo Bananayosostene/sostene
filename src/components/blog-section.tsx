@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function BlogSection() {
   const [email, setEmail] = useState("");
@@ -115,9 +116,11 @@ export default function BlogSection() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
+                  width={400} 
+                  height={200}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <Badge className="absolute top-4 left-4 bg-accent text-accent-foreground">
