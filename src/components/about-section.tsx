@@ -57,7 +57,7 @@ export default function AboutSection() {
                 </div>
 
                 <p className="text-card-foreground leading-relaxed mb-6">
-                  I'm a passionate software developer with over 5 years of
+                  I&apos;m a passionate software developer with over 5 years of
                   experience in building scalable web applications. I specialize
                   in modern JavaScript frameworks and have a strong background
                   in both frontend and backend development. I love turning
@@ -66,7 +66,7 @@ export default function AboutSection() {
                 </p>
 
                 <p className="text-card-foreground leading-relaxed">
-                  When I'm not coding, you can find me exploring new
+                  When I&apos;m not coding, you can find me exploring new
                   technologies, contributing to open-source projects, or sharing
                   my knowledge through technical writing and mentoring.
                 </p>
