@@ -56,7 +56,9 @@ export default function Navigation() {
           <div className="md:hidden flex items-center justify-between w-full">
             <div className="flex-shrink-0">
               <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-600">
-                <img
+                <Image
+                  width={40}
+                  height={40}
                   src="/api/placeholder/40/40"
                   alt="Profile"
                   className="w-full h-full object-cover"

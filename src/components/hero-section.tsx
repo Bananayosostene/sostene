@@ -115,7 +115,7 @@ export default function HeroSection() {
                     <a
                       key={label}
                       href={href}
-                      className="text-[#3b82f6] hover:text-[#2576f9] transition-colors duration-200"
+                      className="text-accent hover:text-accent/80 transition-colors duration-200"
                       aria-label={label}
                     >
                       <Icon className="h-6 w-6" />
