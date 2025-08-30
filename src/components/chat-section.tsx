@@ -166,9 +166,9 @@ export default function ChatSection() {
 
       {/* Chat Window */}
       {isChatOpen && (
-        <div className="fixed bottom-6 right-6 w-80 h-96 bg-background border border-border rounded-lg shadow-xl z-50 flex flex-col">
+        <div className="fixed bottom-6 right-6 w-80 h-96 bg-background border border-gray-900 rounded-lg shadow-xl z-50 flex flex-col">
           {/* Chat Header */}
-          <div className="flex items-center justify-between p-4 border-b border-border">
+          <div className="flex items-center justify-between p-4 border-b border-gray-900">
             <div className="flex items-center gap-3">
               <div className="relative">
                 <Image
@@ -222,7 +222,7 @@ export default function ChatSection() {
           {/* Chat Input */}
           <form
             onSubmit={handleSendMessage}
-            className="p-4 border-t border-border"
+            className="p-4 border-t border-gray-900"
           >
             <div className="flex gap-2">
               <Input
