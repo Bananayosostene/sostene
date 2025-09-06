@@ -1,3 +1,4 @@
+/* loved color #3b82f6 */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -236,4 +237,14 @@
     background-position: 20px 20px;
   }
 }
+
+  @layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+  .scrollbar-hide::-webkit-scrollbar { 
+    display: none;  
+  }
+  }
 
