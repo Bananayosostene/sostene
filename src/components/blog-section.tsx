@@ -16,12 +16,12 @@ export default function BlogSection() {
 
   const blogPosts = [
     {
-      title: "Building Scalable React Applications",
+      title: "Building Scalable Nextjs Applications",
       excerpt:
-        "Learn the best practices for building large-scale React applications that can grow with your team and user base.",
+        "Learn the best practices for building large-scale Nextjs applications that can grow with your team and user base.",
       date: "2024-01-15",
       readTime: "8 min read",
-      category: "React",
+      category: "Next.js",
       image: "/react-code-editor.png",
     },
     {
@@ -119,7 +119,7 @@ export default function BlogSection() {
                 <Image
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
-                  width={400} 
+                  width={400}
                   height={200}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />

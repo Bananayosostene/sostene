@@ -17,7 +17,7 @@ export default function Footer() {
               <a
                 key={label}
                 href={href}
-                className="text-[#3b82f6] hover:text-[#2576f9] transition-colors duration-200"
+                className="text-gray-500 hover:text-gray-600 transition-colors duration-200"
                 aria-label={label}
               >
                 <Icon className="h-6 w-6" />
@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-4 items-center justify-center">
-            <p className="text-[#3b82f6] text-sm">
+            <p className="text-gray-500 text-sm">
               © 2024 Sostene BANANAYO. All rights reserved.
             </p>
           </div>

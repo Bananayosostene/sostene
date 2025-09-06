@@ -197,7 +197,7 @@ export default function ChatSection() {
           </div>
 
           {/* Chat Messages */}
-          <div className="flex-1 p-4 overflow-y-auto space-y-3">
+          <div className="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-hide">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -229,7 +229,7 @@ export default function ChatSection() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type a message..."
-                className="flex-1"
+                className="flex-1 text-gray-500 placeholder:text-gray-400"
               />
               <Button
                 type="submit"

@@ -1,5 +1,8 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Download, Eye } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutSection() {
@@ -18,8 +21,24 @@ export default function AboutSection() {
     "GraphQL",
   ];
 
+  // Function to handle CV viewing
+  const handleViewCV = () => {
+    // Open CV in new tab
+    window.open("/cv/Sostene-BANANAYO-CV.pdf", "_blank");
+  };
+
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/cv/Sostene-BANANAYO-CV.pdf";
+    link.download = "Sostene-BANANAYO-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section id="about" className="py-20 ">
+    <section id="about" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -105,26 +124,30 @@ export default function AboutSection() {
                     <h5 className="font-semibold text-card-foreground">
                       Senior Full Stack Developer
                     </h5>
-                    <p className="text-accent text-sm">
-                      TechCorp Inc. • 2022 - Present
-                    </p>
-                    <p className="text-muted-foreground text-sm mt-1">
-                      Leading development of enterprise web applications using
-                      React, Node.js, and AWS.
-                    </p>
                   </div>
-                  <div className="border-l-2 border-muted pl-4">
-                    <h5 className="font-semibold text-card-foreground">
-                      Frontend Developer
-                    </h5>
-                    <p className="text-muted-foreground text-sm">
-                      StartupXYZ • 2020 - 2022
-                    </p>
-                    <p className="text-muted-foreground text-sm mt-1">
-                      Built responsive web applications and improved user
-                      experience metrics by 40%.
-                    </p>
-                  </div>
+                </div>
+                <p className="text-gray-500 text-sm mb-6">
+                  For more about me, review my CV
+                </p>
+
+                <div className="flex gap-3 mb-6">
+                  <Button
+                    onClick={handleViewCV}
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    <Eye className="w-4 h-4" />
+                    View CV
+                  </Button>
+                  <Button
+                    onClick={handleDownloadCV}
+                    size="sm"
+                    className="flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download CV
+                  </Button>
                 </div>
               </CardContent>
             </Card>
