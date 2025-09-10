@@ -12,7 +12,7 @@ export default function ProjectsSection() {
       image: "/modern-ecommerce-dashboard.png",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Bananayosostene?tab=repositories",
     },
     {
       title: "Task Management App",
@@ -21,7 +21,7 @@ export default function ProjectsSection() {
       image: "/task-management-kanban.png",
       technologies: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Bananayosostene?tab=repositories",
     },
     {
       title: "AI Chat Application",
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
       image: "/ai-chatbot-interface.png",
       technologies: ["React", "Python", "OpenAI API", "FastAPI"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Bananayosostene?tab=repositories",
     },
     {
       title: "Weather Dashboard",
@@ -39,7 +39,7 @@ export default function ProjectsSection() {
       image: "/weather-dashboard-interface.png",
       technologies: ["Vue.js", "Express", "Weather API", "Chart.js"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Bananayosostene?tab=repositories",
     },
   ];
 
@@ -47,7 +47,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-500 mb-4">
             My <span className="text-accent">Projects</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
@@ -79,7 +79,7 @@ export default function ProjectsSection() {
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-gray-500 leading-relaxed">
                   {project.description}
                 </p>
 
